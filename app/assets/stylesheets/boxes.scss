@@ -1,6 +1,16 @@
 #dropzone{
   padding: 100px;
-  margin: 50px 200px;
   background: #eee;
   border: 1px solid #ddd;
+}
+
+#progress_container{
+  width: 100%;
+  border: 1px solid #ddd;
+  height: 20px;
+  #progress{
+    height: 20px;
+    width: 0%;
+    background: green;
+  }
 }

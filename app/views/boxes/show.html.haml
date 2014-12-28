@@ -2,5 +2,7 @@
 
 = form_tag({ action: :upload }, multipart: true, class: 'upload_to_box')do
   #dropzone
-  = file_field_tag 'file', multiple: true
-  = submit_tag "Upload"
+    = file_field_tag :file, multiple: true
+  #progress_container
+    #progress
+

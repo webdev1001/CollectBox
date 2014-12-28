@@ -21,16 +21,24 @@ class BoxesController < ApplicationController
   def authenticate
     dropbox_session = DropboxSession.deserialize(session[:dropbox_session])
     @box.update(access_token: dropbox_session.get_access_token)
+
     session[:dropbox_session] = dropbox_session.serialize
     @box.update(dropbox_session: session[:dropbox_session])
+
     redirect_to @box
   end
 
   def upload
     dropbox_session = DropboxSession.deserialize(@box.dropbox_session)
-    @dropbox_client = DropboxClient.new(dropbox_session)
-    file = params[:file]
-    @dropbox_client.put_file("#{@box.folder_name}/#{file.original_filename}", File.open(file.tempfile))
+    dropbox_client = DropboxClient.new(dropbox_session)
+
+    params[:files].each do |uploaded_file|
+      filename = "#{@box.folder_name}/#{uploaded_file.original_filename}"
+      file = File.open(uploaded_file.tempfile)
+
+      dropbox_client.put_file(filename, file)
+    end
+
     render nothing: true
   end
 

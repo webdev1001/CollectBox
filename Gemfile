@@ -14,6 +14,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bourbon'
 gem 'neat'
+gem 'haml-rails'
 
 gem 'dropbox-sdk'
 

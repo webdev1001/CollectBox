@@ -2,3 +2,8 @@
 @import 'base/base';
 @import 'neat';
 @import 'boxes';
+
+.container{
+  @include outer-container();
+  margin-top: 100px;
+}

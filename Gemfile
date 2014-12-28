@@ -18,6 +18,9 @@ gem 'haml-rails'
 
 gem 'dropbox-sdk'
 
+gem 'capistrano', '~> 3.1'
+gem 'capistrano-rails', '~> 1.1'
+
 group :development, :test do
   gem 'dotenv-rails'
   gem 'byebug'

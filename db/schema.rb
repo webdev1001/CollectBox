@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141228164958) do
+ActiveRecord::Schema.define(version: 20141228181533) do
 
   create_table "boxes", force: :cascade do |t|
     t.string   "name"
     t.string   "access_token"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.text     "dropbox_session"
   end
 
 end

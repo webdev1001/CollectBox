@@ -16,6 +16,7 @@ gem 'neat'
 gem 'haml-rails'
 
 gem 'dropbox-sdk'
+gem 'rails_12factor', group: :production
 
 group :development, :test do
   gem 'sqlite3'

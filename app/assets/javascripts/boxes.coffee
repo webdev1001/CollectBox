@@ -1,3 +1,10 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+$ ->
+  $("#dropzone").click ->
+    $("input#file").click()
+
+  $('.upload_to_box').fileupload
+    dropZone: $("#dropzone")
+    disableImageResize: /Android(?!.*Chrome)|Opera/.test(window.navigator && navigator.userAgent)
+
+  $(document).on "drop dragover", (e) ->
+    e.preventDefault()

@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  access_token: MyString
+  name: Christmas Dinner
+  access_token: a51325asdg5w36asd3dsa23
 
 two:
-  name: MyString
-  access_token: MyString
+  name: Summer in the city
+  access_token: ahsiudas892w368ta6dguye

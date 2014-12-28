@@ -1,3 +1,5 @@
+require 'dropbox_sdk'
+
 class BoxesController < ApplicationController
   before_action :set_box, only: [:show, :authenticate, :upload]
 
